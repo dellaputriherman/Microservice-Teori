@@ -1,0 +1,43 @@
+Nama   : Della Putri Herman
+No BP  : 2201082024
+Kelas  : TK 2A
+Matkul : Pemrograman Microservice (Teori)
+
+
+		VIDEO 9. Type of Microservices
+
+	3 Microservices => Stateless Microservice, Persistence Microservice, dan Aggregation Microservice.
+
+1. Stateless Microservice tidak menyimpan data antara permintaan, biasanya digunakan untuk tugas sederhana, dan tidak bergantung pada microservice lain. 
+   Contohnya adalah Email Service dan SMS Service.
+2. Persistence Microservice biasanya memiliki database, digunakan untuk mengelola data dalam database, dan dikenal sebagai master data microservice. 
+   Contohnya adalah Customer Service (MySQL), Product Service (PostgreSQL), dan Order Service (MongoDB).
+3. Aggregation Microservice bergantung pada microservice lain, digunakan sebagai pusat logika bisnis aplikasi, dan tidak dapat berdiri sendiri. 
+   Contohnya adalah Cart Service dan Payment Service.
+
+Dalam kasus integrasi dari ketiga jenis microservice, proses pemesanan barang dan pembayaran dijelaskan. Cart Service bertindak sebagai orchestrator 
+atau pengatur utama dari alur proses, mengoordinasikan interaksi antara microservice lainnya untuk menyelesaikan tugas bisnis yang lebih besar.
+
+Tipe-tipe microservice adalah :
+
+1. Stateless Microservice :
+   - Layanan ini tidak menyimpan status atau data antara permintaan. 
+   - Biasanya tidak memiliki database sendiri.
+   - Digunakan untuk tugas-tugas sederhana atau sebagai utilitas untuk microservice lain.
+   - Tidak bergantung pada microservice lain.
+   - Contoh: Email Service, SMS Service.
+
+2. Persistence Microservice :
+   - Layanan ini biasanya memiliki database dan dikenal sebagai master data microservice.
+   - Digunakan untuk mengelola data dalam database, termasuk operasi Create, Read, Update, dan Delete (CRUD operations).
+   - Contoh: Customer Service (MySQL), Product Service (PostgreSQL), Order Service (MongoDB).
+
+3. Aggregation Microservice :
+   - Bergantung pada microservice lain dalam menjalankan fungsinya.
+   - Digunakan sebagai pusat logika bisnis aplikasi, menggabungkan dan mengkoordinasikan data dari beberapa microservice.
+   - Bisa memiliki database sendiri atau menggunakan data dari microservice lain.
+   - Tidak dapat berdiri sendiri.
+   - Contoh: Cart Service, Payment Service.
+
+
+
