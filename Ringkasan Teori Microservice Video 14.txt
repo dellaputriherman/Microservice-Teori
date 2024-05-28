@@ -1,0 +1,42 @@
+Nama   : Della Putri Herman
+No BP  : 2201082024
+Kelas  : TK 2A
+Matkul : Pemrograman Microservice (Teori)
+
+
+	VIDEO 14. Backend for Frontend
+
+Backend for Frontend (BFF) adalah sebuah pola arsitektur dalam pengembangan perangkat lunak
+di mana backend dibuat khusus untuk melayani kebutuhan frontend tertentu. Tujuan utama dari
+pola ini adalah untuk mengatasi masalah dan kebutuhan yang unik dari setiap antarmuka
+pengguna (frontend) dengan menyediakan lapisan backend yang disesuaikan secara eksklusif
+untuk frontend tersebut.
+
+
+Permasalahan Banyak Jenis Frontend
+	1. Tiap frontend punya mekanisme autentikasi berbeda
+	2. Kecepatan bandwidth tiap frontend berbeda
+	3. API yang dibutuhkan tiap frontend berbeda
+	4. Semua kebutuhan jenis frontend harus diimplementasikan di satu API Gateway
+
+
+Backend for Frontend
+	a. Backend for Frontend adalah menyediakan backend khusus untuk frontend tertentu
+	b. Biasanya satu backend akan melayani satu frontend secara specific
+	c. Makin banyak jenis frontend, makin banyak backend yang dibuat
+
+
+Keuntungan Backend for Frontend
+	- Pengembangan backend untuk tiap frontend bisa terisolasi satu sama lain
+	- Logic untuk frontend tidak tercampur di satu backend
+
+GraphQL : Alternative Backend for Frontend
+	> GraphQL adalah query language untuk API
+	> GraphQL dapat digunakan untuk memanipulasi response API secara runtime
+	> Frontend bebas menentukan data apa aja yang ingin didapatkan
+	> Backend hanya perlu menyediakan data lengkap, dan Frontend bisa dengan bebas
+	  menentukan data apa aja yang diinginkan.
+
+Kekurangan Menggunakan GraphQL
+	- Butuh melakukan development GraphQL Server di Backend
+	- Butuh melakukan development GraphQL Client di Frontend
