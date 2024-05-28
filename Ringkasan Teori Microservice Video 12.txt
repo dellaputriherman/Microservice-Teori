@@ -1,0 +1,28 @@
+Nama   : Della Putri Herman
+No BP  : 2201082024
+Kelas  : TK 2A
+Matkul : Pemrograman Microservice (Teori)
+
+	VIDEO 12. API Gateway
+
+
+Masalah Mengekspos Microservices
+	• Semua service bisa diakses dari luar
+	• Jika butuh Autentikasi, harus diimplementasikan di semua service
+	• Rawan terjadi kebocoran data
+
+API Gateway
+	a. API Gateway adalah aplikasi yang bertugas sebagai gerbang dari luar ke dalam
+	b. Luar adalah akses dari internet, dan Dalam adalah aplikasi microservices
+	c. API Gateway bertugas sebagai proxy server ke semua aplikasi microservices
+	d. Aplikasi microservices hanya bisa diakses dari luar melalui API Gateway
+
+Keuntungan API Gateway
+	1. Lebih aman karena satu gerbang
+	2. Service tidak perlu mengimplementasikan proses Autentikasi, cukup dilakukan di API Gateway
+	3. API Gateway juga bisa digunakan sebagai load balancer
+	4. Bisa digunakan sebagai rate limiter
+	5. Bisa digunakan sebagai pengaman sehingga error dari service tidak terekspos
+
+
+Contoh API Gateway : Nginx, Apache HTTPD, Kong, Netflix Zuul, Spring, Cloud Gateway
