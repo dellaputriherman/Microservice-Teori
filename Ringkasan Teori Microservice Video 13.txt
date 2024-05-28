@@ -1,0 +1,27 @@
+Nama   : Della Putri Herman
+No BP  : 2201082024
+Kelas  : TK 2A
+Matkul : Pemrograman Microservice (Teori)
+
+	VIDEO 13. Authentication dan Authorization
+
+Authentication : Memvalidasi kredensial untuk memverifikasi pemilik identitas. 
+Contoh proses Authentication adalah proses login menggunakan username dan password, dan banyak yang lainnya.
+
+Authorization : adalah proses yang dilakukan setelah proses Authentication.
+Memvalidasi apakah pemilik identitas memiliki hak akses untuk mengakses resource yang
+diminta. 
+Contoh proses Authorization adalah Access-Control List, dan banyak yang lainnya.
+
+Setiap komponen perlu diatur dengan baik untuk melindungi data dan fungsionalitas dari akses yang tidak sah.
+	1. Auth Service : Pastikan bahwa Auth Service Anda menggunakan protokol keamanan yang
+	   kuat seperti OAuth2 atau OpenID Connect. Ini memastikan bahwa hanya pengguna yang
+	   sah yang bisa mengakses layanan.
+	2. Integrasi dengan Auth Service : Pastikan setiap microservice memvalidasi token akses yang diterima dari 
+	   Auth Service sebelum memberikan akses ke sumber daya atau layanan. Ini membantu mencegah akses yang tidak sah.
+	3. API Gateway sebagai Middleware : API Gateway dapat bertindak sebagai pintu gerbang
+	   tunggal untuk semua permintaan klien. Pastikan untuk mengkonfigurasi API Gateway
+	   dengan lapisan keamanan yang kuat seperti kontrol akses berbasis token, throttling, dan pemantauan lalu lintas.
+
+Teknologi Pendukung : Secure Cookie, Oauth, JSON Web Token, Basic Auth, API Key / Secret Key
+
