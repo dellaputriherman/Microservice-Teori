@@ -1,0 +1,45 @@
+Nama   : Della Putri Herman
+No BP  : 2201082024
+Kelas  : TK 2A
+Matkul : Pemrograman Microservice (Teori)
+
+
+	VIDEO 19. Centralized Configuration
+
+
+	Centralized configuration merujuk pada pendekatan di mana konfigurasi aplikasi disimpan dan
+dikelola secara terpusat, biasanya di luar kode sumber aplikasi itu sendiri. Dalam pendekatan ini,
+konfigurasi seperti pengaturan lingkungan, kunci API, atau parameter aplikasi disimpan dalam
+lokasi tunggal yang dapat diakses oleh semua instance aplikasi. Ini memungkinkan untuk
+mendistribusikan perubahan konfigurasi secara otomatis ke seluruh sistem tanpa perlu mengubah
+kode sumber aplikasi. Pendekatan ini membantu meningkatkan keterbacaan, konsistensi, dan
+keamanan konfigurasi, serta memungkinkan manajemen versi dan pelacakan perubahan dengan
+lebih baik.
+
+Centralized Configuration
+a. Centralized Configuration adalah pattern dimana kita menyimpan semua konfigurasi di
+   sebuah aplikasi atau service
+b. Service yang butuh konfigurasi akan bertanya ke aplikasi tersebut untuk mendapatkan
+   data konfigurasinya
+
+Keuntungan menggunakan centralized configuration
+1. Konsistensi => Dengan menyimpan semua konfigurasi di satu tempat, memastikan bahwa
+   semua instance aplikasi menggunakan pengaturan yang sama.
+2. Keterbacaan => Konfigurasi yang terpusat mudah diakses dan dimengerti oleh tim
+   pengembang dan operasi sistem.
+3. Distribusi Otomatis: Perubahan konfigurasi dapat didistribusikan secara otomatis ke
+   seluruh sistem, mengurangi risiko kesalahan konfigurasi dan mempercepat pengembangan.
+4. Manajemen Versi: Sistem centralized configuration sering menyediakan manajemen
+   versi, memungkinkan untuk melacak perubahan konfigurasi dari waktu ke waktu dan
+   kembali ke versi sebelumnya jika diperlukan.
+5. Keamanan: Mekanisme keamanan dapat diterapkan untuk mengontrol akses terhadap
+   konfigurasi, seperti otentikasi dan otorisasi.
+
+Dimana Menyimpan Konfigurasi?
+a. Konfigurasi adalah sesuatu yang tidak asing lagi saat membuat aplikasi
+b. Tiap aplikasi biasanya memiliki konfigurasi, seperti konfigurasi database misalnya
+c. Pertanyaannya, dimana sebaiknya menyimpan konfigurasi? Agar mudah untuk di maintain
+   dan digunakan oleh aplikasi kita?
+
+Contoh Lokasi Konfigurasi : Database, File dan Environment Variable
+
