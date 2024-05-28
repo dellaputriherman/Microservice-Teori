@@ -1,0 +1,59 @@
+Nama   : Della Putri Herman
+No BP  : 2201082024
+Kelas  : TK 2A
+Matkul : Pemrograman Microservice (Teori)
+
+
+	VIDEO 17. Client Side Discovery
+
+
+Karakteristik Client-Side Discovery: 
+
+1. Service Registry => Pusat Penyimpanan Informasi Layanan: Menyimpan informasi tentang lokasi dan status
+   layanan yang tersedia. Layanan terdaftar dengan service registry saat mereka muncul dan
+   dihapus saat mereka berhenti atau crash.
+   Dinamis: Informasi dalam registry diperbarui secara dinamis sesuai dengan perubahan status layanan.
+
+2. Client-Side Load Balancing => Load Balancing: Klien bertanggung jawab untuk memilih instance layanan dari daftar yang
+   diperoleh dari service registry. Ini bisa dilakukan dengan berbagai strategi seperti roundrobin, random, atau berdasarkan
+   metrik tertentu seperti latency atau kapasitas.
+
+3. Decoupling => Pemutusan Keterkaitan: Klien tidak perlu mengetahui detail lokasi statis dari layanan tetapi
+   mengandalkan informasi yang disediakan oleh service registry.
+
+4. Dynamic Configuration => Pembaruan Dinamis: Klien dapat memperbarui konfigurasinya secara dinamis berdasarkan
+   perubahan dalam service registry, memungkinkan penanganan perubahan topologi layanan tanpa restart.
+
+
+	Client-side discovery adalah pola desain dalam arsitektur microservices di mana klien bertanggung
+jawab untuk menemukan lokasi layanan yang ingin diakses. Dalam pola ini, klien mengakses service registry 
+untuk mendapatkan daftar instance layanan yang tersedia dan kemudian memilih satu instance untuk mengirimkan 
+permintaan. Hal ini memungkinkan klien untuk secara langsung mengelola logika penemuan dan load balancing.
+
+
+Client Side Discovery
+1. Client side discovery adalah solusi agar client harus bisa tahu lokasi semua lokasi service
+   yang akan dituju
+2. Tidak perlu lagi ada router atau load balancer untuk berkomunikasi dengan Service lain
+3. Semua logic untuk mendistribusikan traffic harus dilakukan di client atau service yang akan
+   melakukan request.
+
+
+Manfaat Client-Side Discovery:
+a. Reduced Infrastructure Complexity
+   Tidak memerlukan komponen infrastruktur tambahan seperti load balancer atau service
+   proxy, sehingga mengurangi kompleksitas dan biaya infrastruktur.
+b. Flexible Load Balancing
+   Klien memiliki fleksibilitas untuk mengimplementasikan logika load balancing yang
+   sesuai dengan kebutuhan spesifik mereka, memungkinkan optimisasi berdasarkan metrik
+   tertentu.
+c. Scalability
+   Klien dapat langsung menyesuaikan dengan perubahan dalam jumlah instance layanan,
+   mendukung skalabilitas yang lebih baik.
+
+
+Kekurangan Client Side Discovery
+1. Client harus tahu lokasi semua service
+2. Jika jumlah node service bertambah atau berkurang, client harus diubah untuk lokasi barunya
+3. Jika client salah mengimplementasikan logic untuk load balancer, maka traffic ke service
+   yang dituju bisa tidak merata pembagiannya
